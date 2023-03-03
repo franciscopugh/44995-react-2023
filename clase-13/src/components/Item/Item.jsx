@@ -11,7 +11,7 @@ export const Item = ({ item }) => {
       <div className={`card-body ${darkMode ? 'cardBodyDark' : 'cardBody'}`}>
         <h5 className="card-title">{item.nombre} {item.modelo}</h5>
         <p className="card-text">{item.marca}</p>
-        <p className="card-text">${item.precio}</p>
+        <p className="card-text">${new Intl.NumberFormat('de-DE').format(item.precio)}</p>
         <Link className="nav-link" to={`/item/${item.id}`}><button className="btn btn-primary">Ver Producto</button></Link>
       </div>
     </div>
